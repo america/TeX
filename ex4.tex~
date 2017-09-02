@@ -1,9 +1,0 @@
-\documentclass[autodetect-engine,dvipdfmxi-if-dvi,ja=standard]{bxjsarticle}
-\begin{document}
-
-フェルマーの小定理
-\begin{equation}
-  M{p-1} = 1 (mod p)
-\end{equation}
-
-\end{document}

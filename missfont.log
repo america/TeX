@@ -1,2 +1,0 @@
-mktexpk --mfmode / --bdpi 300 --mag 0+277/300 --dpi 277 rml
-mktexpk --mfmode / --bdpi 300 --mag 0+289/300 --dpi 289 rml
