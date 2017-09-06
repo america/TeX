@@ -1,4 +1,8 @@
 \documentclass[fleqn,leqno,autodetect-engine,dvipdfmx-if-dvi,ja=standard]{bxjsarticle}
+
+\usepackage{amsmath,amssymb,comment}
+
+\usepackage{version}	% required for `\comment' (yatex added)
 \begin{document}
 \part{おいしいコンパーニュ}
 ここでは、おいしいコンパーニュについて解説します.
@@ -32,4 +36,59 @@ n個から順序を意識せずにk個取り出す場合の数（組み合わせ
 	       \end{array}
                \right) = \frac{n!}{k!(n-k)!}  
 \]
+
+\section{二項定理}
+
+\[
+ (a + b)^n = \sum_{k=0}^n \left(
+                             \begin{array}{c}
+                             n \\
+                             k 
+	                     \end{array}
+                             \right) a^{n-k} b^k
+\]
+
+\ \\
+n = 1のとき・・・
+\begin{eqnarray*}
+ (a + b)^1 &=& \sum_{k=0}^1 \left(
+                             \begin{array}{c}
+                             1 \\
+                             k 
+	                     \end{array}
+                             \right) a^{1-k} b^k \qquad \qquad \qquad \qquad \ \ \ \  \text{二項定理でn = 1とした}\\
+  &=& \underbrace{ 
+        \left(
+        \begin{array}{c}
+        1 \\
+        0 
+        \end{array}
+        \right) a^{1-0} b^0
+        }_{k = 0の場合}
+        +
+        \underbrace{
+        \left(
+        \begin{array}{c}
+        1 \\
+        1 
+        \end{array}
+        \right) a^{1-1} b^1
+        }_{k = 1の場合} \qquad \qquad \text{$\sum$ を使わず表現した}\\
+  &=& 1a^{1-0} b^0 + 1a^{1-1} b^1 \qquad \qquad \qquad \qquad \ \ \ \text{$\left(
+                                                                    \begin{array}{c}
+                                                                    1 \\
+                                                                    0 
+                                                                    \end{array}
+                                                                    \right) = 1$,                                                                     
+                                                                    $\left(
+                                                                    \begin{array}{c}
+                                                                    1 \\
+                                                                    1 
+                                                                    \end{array}
+                                                                    \right) = 1$ を使った}\\
+  &=& 1a^1b^0 + 1a^0b^1\\
+  &=& a^1 + b^1\\
+  &=& a + b
+\end{eqnarray*}
+
 \end{document}
