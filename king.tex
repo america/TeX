@@ -29,63 +29,28 @@ n個から順序を意識してk個取り出す場合の数（順列の定義）
 \section{組み合わせ}
 
 n個から順序を意識せずにk個取り出す場合の数（組み合わせの定義）
-\[ {}_n C _k = \left(
-               \begin{array}{c}
-                 n \\
-                 k 
-	       \end{array}
-               \right) = \frac{n!}{k!(n-k)!}  
+\[ {}_n C _k = \binom nk = \frac{n!}{k!(n-k)!}  
 \]
 
 \section{二項定理}
 
 \[
- (a + b)^n = \sum_{k=0}^n \left(
-                             \begin{array}{c}
-                             n \\
-                             k 
-	                     \end{array}
-                             \right) a^{n-k} b^k
+ (a + b)^n = \sum_{k=0}^n \binom nk a^{n-k} b^k
 \]
 
 \ \\
 n = 1のとき・・・
 \begin{eqnarray*}
- (a + b)^1 &=& \sum_{k=0}^1 \left(
-                             \begin{array}{c}
-                             1 \\
-                             k 
-	                     \end{array}
-                             \right) a^{1-k} b^k \qquad \qquad \qquad \qquad \ \ \ \  \text{二項定理でn = 1とした}\\
+ (a + b)^1 &=& \sum_{k=0}^1 \binom 1k a^{1-k} b^k \qquad \qquad \qquad \qquad \ \ \ \  \text{二項定理でn = 1とした}\\
   &=& \underbrace{ 
-        \left(
-        \begin{array}{c}
-        1 \\
-        0 
-        \end{array}
-        \right) a^{1-0} b^0
+        \binom 10 a^{1-0} b^0
         }_{k = 0の場合}
         +
         \underbrace{
-        \left(
-        \begin{array}{c}
-        1 \\
-        1 
-        \end{array}
-        \right) a^{1-1} b^1
+        \binom 11 a^{1-1} b^1
         }_{k = 1の場合} \qquad \qquad \text{$\sum$ を使わず表現した}\\
-  &=& 1a^{1-0} b^0 + 1a^{1-1} b^1 \qquad \qquad \qquad \qquad \ \ \ \text{$\left(
-                                                                    \begin{array}{c}
-                                                                    1 \\
-                                                                    0 
-                                                                    \end{array}
-                                                                    \right) = 1$,                                                                     
-                                                                    $\left(
-                                                                    \begin{array}{c}
-                                                                    1 \\
-                                                                    1 
-                                                                    \end{array}
-                                                                    \right) = 1$ を使った}\\
+  &=& 1a^{1-0} b^0 + 1a^{1-1} b^1 \qquad \qquad \qquad \qquad \ \ \ \text{$\binom {1}{0} = 1$,                                                                     
+                                                                    $\binom {1}{1} = 1$ を使った}\\
   &=& 1a^1b^0 + 1a^0b^1\\
   &=& a^1 + b^1\\
   &=& a + b
