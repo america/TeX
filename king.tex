@@ -40,6 +40,7 @@ n個から順序を意識せずにk個取り出す場合の数（組み合わせ
 
 \section{二項定理}
 
+二項式の冪の代数的な展開を記述するものである.
 \[
  (a + b)^n = \sum_{k=0}^n \binom nk a^{n-k} b^k
 \]
@@ -60,6 +61,24 @@ n = 1のとき・・・
   &=& 1a^1b^0 + 1a^0b^1\\
   &=& a^1 + b^1\\
   &=& a + b
+\end{eqnarray*}
+
+n = 2のとき・・・
+\begin{eqnarray*}
+ (a + b)^2 &=& \sum_{k=0}^2 \binom 2k a^{2-k} \\
+  &=& \underbrace{ 
+        \binom 20 a^{2-0} b^0
+        }_{k = 0の場合}
+        +
+        \underbrace{
+        \binom 21 a^{2-1} b^1
+        }_{k = 1の場合} 
+        +
+        \underbrace{
+        \binom 22 a^{2-2} b^2
+        }_{k = 2の場合}\\
+  &=& 1a^{2-0} b^0 + 2a^{2-1} b^1 + 1a^{2-2} b^2\\                                            &=& 1a^2b^0 + 2a^1b^1 + 1a^0b^2\\
+  &=& a^2 + 2ab + b^2
 \end{eqnarray*}
 
 \end{document}
